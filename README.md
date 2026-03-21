@@ -9,6 +9,12 @@ A **Manifest V3 Chrome Extension** that transforms any modern website into a ret
 ![RETROFY WEB Image](/RETROFY%20WEB7.png)
 
 ---
+![RETROFY WEB Image](/RETROFY%20WEB4.png)
+
+---
+![RETROFY WEB Image](/RETROFY%20WEB6.png)
+
+---
 
 ## 📁 Project Structure
 
