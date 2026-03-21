@@ -1,0 +1,354 @@
+/* ============================================
+   RETROFY WEB — Injected Retro Styles
+   ============================================ */
+
+/* --- VT323 Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* --- Theme Variables --- */
+:root {
+  --retro-bg: #0a0a0a;
+  --retro-bg-secondary: #111111;
+  --retro-text: #FFB000;
+  --retro-text-dim: #cc8d00;
+  --retro-text-bright: #FFD466;
+  --retro-border: #FFB000;
+  --retro-link: #FFD466;
+  --retro-glow: 0 0 8px rgba(255, 176, 0, 0.4);
+  --retro-glow-strong: 0 0 16px rgba(255, 176, 0, 0.6);
+  --retro-selection-bg: #FFB000;
+  --retro-selection-fg: #0a0a0a;
+  --retro-input-bg: #0d0d0d;
+  --retro-scrollbar-track: #111;
+  --retro-scrollbar-thumb: #FFB000;
+}
+
+/* --- Green Theme --- */
+body.retrofy-theme-green {
+  --retro-text: #00FF66;
+  --retro-text-dim: #00cc52;
+  --retro-text-bright: #66FFa3;
+  --retro-border: #00FF66;
+  --retro-link: #66FFa3;
+  --retro-glow: 0 0 8px rgba(0, 255, 102, 0.4);
+  --retro-glow-strong: 0 0 16px rgba(0, 255, 102, 0.6);
+  --retro-selection-bg: #00FF66;
+  --retro-scrollbar-thumb: #00FF66;
+}
+
+/* --- White Theme --- */
+body.retrofy-theme-white {
+  --retro-text: #cccccc;
+  --retro-text-dim: #999999;
+  --retro-text-bright: #ffffff;
+  --retro-border: #888888;
+  --retro-link: #ffffff;
+  --retro-glow: 0 0 8px rgba(255, 255, 255, 0.2);
+  --retro-glow-strong: 0 0 16px rgba(255, 255, 255, 0.35);
+  --retro-selection-bg: #cccccc;
+  --retro-scrollbar-thumb: #888888;
+}
+
+/* ============================================
+   CORE OVERRIDES (only when .retrofy-active)
+   ============================================ */
+
+body.retrofy-active {
+  background-color: var(--retro-bg) !important;
+  color: var(--retro-text) !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  -webkit-font-smoothing: none !important;
+  text-rendering: optimizeSpeed !important;
+}
+
+body.retrofy-active * {
+  font-family: 'VT323', monospace !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: none !important;
+}
+
+/* --- Backgrounds --- */
+body.retrofy-active div,
+body.retrofy-active section,
+body.retrofy-active article,
+body.retrofy-active aside,
+body.retrofy-active nav,
+body.retrofy-active header,
+body.retrofy-active footer,
+body.retrofy-active main,
+body.retrofy-active figure {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* --- Text colors --- */
+body.retrofy-active h1,
+body.retrofy-active h2,
+body.retrofy-active h3,
+body.retrofy-active h4,
+body.retrofy-active h5,
+body.retrofy-active h6 {
+  color: var(--retro-text-bright) !important;
+  text-shadow: var(--retro-glow) !important;
+  border-bottom: 1px solid var(--retro-border) !important;
+  padding-bottom: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+body.retrofy-active p,
+body.retrofy-active span,
+body.retrofy-active li,
+body.retrofy-active td,
+body.retrofy-active th,
+body.retrofy-active label,
+body.retrofy-active small,
+body.retrofy-active blockquote,
+body.retrofy-active figcaption,
+body.retrofy-active dt,
+body.retrofy-active dd {
+  color: var(--retro-text) !important;
+}
+
+/* --- Links --- */
+body.retrofy-active a {
+  color: var(--retro-link) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+body.retrofy-active a:hover {
+  text-shadow: var(--retro-glow) !important;
+  color: var(--retro-text-bright) !important;
+}
+
+/* --- Borders --- */
+body.retrofy-active table,
+body.retrofy-active th,
+body.retrofy-active td,
+body.retrofy-active hr {
+  border-color: var(--retro-border) !important;
+  border-style: solid !important;
+}
+
+/* --- Forms & Inputs --- */
+body.retrofy-active input,
+body.retrofy-active textarea,
+body.retrofy-active select {
+  background-color: var(--retro-input-bg) !important;
+  color: var(--retro-text) !important;
+  border: 1px solid var(--retro-border) !important;
+  padding: 6px 10px !important;
+  font-size: 16px !important;
+  outline: none !important;
+}
+
+body.retrofy-active input:focus,
+body.retrofy-active textarea:focus,
+body.retrofy-active select:focus {
+  box-shadow: var(--retro-glow) !important;
+  border-color: var(--retro-text-bright) !important;
+}
+
+body.retrofy-active button,
+body.retrofy-active [role="button"],
+body.retrofy-active input[type="submit"],
+body.retrofy-active input[type="button"] {
+  background-color: var(--retro-bg) !important;
+  color: var(--retro-text) !important;
+  border: 1px solid var(--retro-border) !important;
+  cursor: pointer !important;
+  padding: 6px 16px !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+body.retrofy-active button:hover,
+body.retrofy-active [role="button"]:hover,
+body.retrofy-active input[type="submit"]:hover,
+body.retrofy-active input[type="button"]:hover {
+  background-color: var(--retro-text) !important;
+  color: var(--retro-bg) !important;
+}
+
+/* --- Images: dim but preserve --- */
+body.retrofy-active img,
+body.retrofy-active video,
+body.retrofy-active svg {
+  filter: grayscale(80%) brightness(0.7) contrast(1.3) !important;
+  opacity: 0.7 !important;
+}
+
+/* --- Selection --- */
+body.retrofy-active ::selection {
+  background: var(--retro-selection-bg) !important;
+  color: var(--retro-selection-fg) !important;
+}
+
+/* --- Scrollbar --- */
+body.retrofy-active::-webkit-scrollbar {
+  width: 10px !important;
+}
+body.retrofy-active::-webkit-scrollbar-track {
+  background: var(--retro-scrollbar-track) !important;
+}
+body.retrofy-active::-webkit-scrollbar-thumb {
+  background: var(--retro-scrollbar-thumb) !important;
+  border-radius: 0 !important;
+}
+
+/* ============================================
+   CRT OVERLAY (scanlines + glow)
+   ============================================ */
+
+#retrofy-crt-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 2147483646 !important;
+  pointer-events: none !important;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  ) !important;
+  mix-blend-mode: multiply !important;
+}
+
+#retrofy-crt-overlay::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.35) 100%
+  ) !important;
+}
+
+/* --- Subtle Flicker (opt-in) --- */
+@keyframes retrofy-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.97; }
+}
+
+body.retrofy-flicker #retrofy-crt-overlay {
+  animation: retrofy-flicker 0.1s infinite !important;
+}
+
+/* ============================================
+   BOOT SEQUENCE
+   ============================================ */
+
+#retrofy-boot-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important;
+  background-color: #000 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding: 40px !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 20px !important;
+  color: var(--retro-text) !important;
+  overflow: hidden !important;
+}
+
+#retrofy-boot-overlay .boot-text {
+  white-space: pre-wrap !important;
+  line-height: 1.8 !important;
+}
+
+@keyframes retrofy-cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+#retrofy-boot-overlay .cursor {
+  display: inline-block !important;
+  width: 10px !important;
+  height: 20px !important;
+  background: var(--retro-text) !important;
+  animation: retrofy-cursor-blink 0.6s step-end infinite !important;
+  vertical-align: text-bottom !important;
+  margin-left: 2px !important;
+}
+
+/* Boot fade out */
+@keyframes retrofy-boot-fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+#retrofy-boot-overlay.fade-out {
+  animation: retrofy-boot-fadeout 0.4s ease-out forwards !important;
+}
+
+/* ============================================
+   COMMAND PALETTE
+   ============================================ */
+
+#retrofy-command-palette {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 2147483647 !important;
+  background-color: #000 !important;
+  border-top: 2px solid var(--retro-border) !important;
+  padding: 12px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 20px !important;
+  color: var(--retro-text) !important;
+  box-sizing: border-box !important;
+}
+
+#retrofy-command-palette .prompt {
+  color: var(--retro-text-bright) !important;
+  flex-shrink: 0 !important;
+  text-shadow: var(--retro-glow) !important;
+}
+
+#retrofy-command-palette input {
+  flex: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  color: var(--retro-text) !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 20px !important;
+  outline: none !important;
+  caret-color: var(--retro-text) !important;
+  padding: 0 !important;
+}
+
+#retrofy-command-palette .output {
+  position: absolute !important;
+  bottom: 50px !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #000 !important;
+  border-top: 1px solid var(--retro-border) !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  color: var(--retro-text-dim) !important;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+}
