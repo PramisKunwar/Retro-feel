@@ -1,3 +1,4 @@
+// Popup.js
 const toggleEnabled = document.getElementById('toggleEnabled');
 const toggleFlicker = document.getElementById('toggleFlicker');
 const toggleBoot = document.getElementById('toggleBoot');
