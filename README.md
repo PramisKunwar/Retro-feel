@@ -3,6 +3,12 @@
 A **Manifest V3 Chrome Extension** that transforms any modern website into a retro terminal-style interface, inspired by 1980s CRT monitors, amber/green monochrome terminals, and classic DOS/UNIX aesthetics — while preserving full usability.
 
 ---
+![RETROFY WEB Image](/RETROFY%20WEB.png)
+
+---
+![RETROFY WEB Image](/RETROFY%20WEB7.png)
+
+---
 
 ## 📁 Project Structure
 
