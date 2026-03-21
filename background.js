@@ -1,3 +1,4 @@
+// background.js
 const DEFAULT_SETTINGS = {
   enabled: true,
   theme: 'amber',
