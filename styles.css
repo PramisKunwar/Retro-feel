@@ -1,11 +1,5 @@
-/* ============================================
-   RETROFY WEB — Injected Retro Styles
-   ============================================ */
-
-/* --- VT323 Font Import --- */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-/* --- Theme Variables --- */
 :root {
   --retro-bg: #0a0a0a;
   --retro-bg-secondary: #111111;
@@ -23,7 +17,6 @@
   --retro-scrollbar-thumb: #FFB000;
 }
 
-/* --- Green Theme --- */
 body.retrofy-theme-green {
   --retro-text: #00FF66;
   --retro-text-dim: #00cc52;
@@ -36,7 +29,6 @@ body.retrofy-theme-green {
   --retro-scrollbar-thumb: #00FF66;
 }
 
-/* --- White Theme --- */
 body.retrofy-theme-white {
   --retro-text: #cccccc;
   --retro-text-dim: #999999;
@@ -48,10 +40,6 @@ body.retrofy-theme-white {
   --retro-selection-bg: #cccccc;
   --retro-scrollbar-thumb: #888888;
 }
-
-/* ============================================
-   CORE OVERRIDES (only when .retrofy-active)
-   ============================================ */
 
 body.retrofy-active {
   background-color: var(--retro-bg) !important;
@@ -71,7 +59,6 @@ body.retrofy-active * {
   transition: none !important;
 }
 
-/* --- Backgrounds --- */
 body.retrofy-active div,
 body.retrofy-active section,
 body.retrofy-active article,
@@ -85,7 +72,6 @@ body.retrofy-active figure {
   background-image: none !important;
 }
 
-/* --- Text colors --- */
 body.retrofy-active h1,
 body.retrofy-active h2,
 body.retrofy-active h3,
@@ -113,7 +99,6 @@ body.retrofy-active dd {
   color: var(--retro-text) !important;
 }
 
-/* --- Links --- */
 body.retrofy-active a {
   color: var(--retro-link) !important;
   text-decoration: underline !important;
@@ -125,7 +110,6 @@ body.retrofy-active a:hover {
   color: var(--retro-text-bright) !important;
 }
 
-/* --- Borders --- */
 body.retrofy-active table,
 body.retrofy-active th,
 body.retrofy-active td,
@@ -134,7 +118,6 @@ body.retrofy-active hr {
   border-style: solid !important;
 }
 
-/* --- Forms & Inputs --- */
 body.retrofy-active input,
 body.retrofy-active textarea,
 body.retrofy-active select {
@@ -175,7 +158,6 @@ body.retrofy-active input[type="button"]:hover {
   color: var(--retro-bg) !important;
 }
 
-/* --- Images: dim but preserve --- */
 body.retrofy-active img,
 body.retrofy-active video,
 body.retrofy-active svg {
@@ -183,13 +165,10 @@ body.retrofy-active svg {
   opacity: 0.7 !important;
 }
 
-/* --- Selection --- */
 body.retrofy-active ::selection {
   background: var(--retro-selection-bg) !important;
   color: var(--retro-selection-fg) !important;
 }
-
-/* --- Scrollbar --- */
 body.retrofy-active::-webkit-scrollbar {
   width: 10px !important;
 }
@@ -200,10 +179,6 @@ body.retrofy-active::-webkit-scrollbar-thumb {
   background: var(--retro-scrollbar-thumb) !important;
   border-radius: 0 !important;
 }
-
-/* ============================================
-   CRT OVERLAY (scanlines + glow)
-   ============================================ */
 
 #retrofy-crt-overlay {
   position: fixed !important;
@@ -237,7 +212,6 @@ body.retrofy-active::-webkit-scrollbar-thumb {
   ) !important;
 }
 
-/* --- Subtle Flicker (opt-in) --- */
 @keyframes retrofy-flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.97; }
@@ -246,10 +220,6 @@ body.retrofy-active::-webkit-scrollbar-thumb {
 body.retrofy-flicker #retrofy-crt-overlay {
   animation: retrofy-flicker 0.1s infinite !important;
 }
-
-/* ============================================
-   BOOT SEQUENCE
-   ============================================ */
 
 #retrofy-boot-overlay {
   position: fixed !important;
@@ -298,10 +268,6 @@ body.retrofy-flicker #retrofy-crt-overlay {
 #retrofy-boot-overlay.fade-out {
   animation: retrofy-boot-fadeout 0.4s ease-out forwards !important;
 }
-
-/* ============================================
-   COMMAND PALETTE
-   ============================================ */
 
 #retrofy-command-palette {
   position: fixed !important;
